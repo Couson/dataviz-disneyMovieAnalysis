@@ -39,7 +39,8 @@ disneyMovie00 = [{'count': 11, 'tag': 'Adventure'},
 {'count': 1, 'tag': 'Western'},
 {'count': 1, 'tag': 'Musical'},
 {'count': 1, 'tag': 'Romance'}];
-// When the user scrolls the page, execute myFunction 
+
+// When the user scrolls the page, execute myFunction
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
@@ -54,92 +55,69 @@ function myFunction() {
 function showFocus() {
     var button = document.getElementById('focuser');
     if (button.innerText == 'Focus') {
-        dateAxis.start = 0.64;
-        dateAxis.end = 0.93;
+        dateAxis.start = 0.55;
+        dateAxis.end = 1;
         button.innerText = 'Show';
     } else {
         dateAxis.start = 0;
         dateAxis.end = 1;
         button.innerText = 'Focus';
     }
-
     // button.
 }
 
 function addPixar() {
     var button = document.getElementById('adder');
     if (button.innerText == 'Add Pixar') {
-          
-        var dateAxis2 = chart2.xAxes.push(new am4charts.DateAxis());
-        dateAxis2.renderer.grid.template.location = 0;
-        dateAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");//used to hide
-        
-        var valueAxis2 = chart2.yAxes.push(new am4charts.ValueAxis());
-        valueAxis2.tooltip.disabled = false;
-        valueAxis2.renderer.grid.template.strokeDasharray = "2,3";
-        valueAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");
-        valueAxis2.renderer.minWidth = 60;
-    
-        series2 = chart2.series.push(new am4charts.LineSeries());
-        series2.name = "pixar"; //disney,pixar colors are inversed because of incorrect labels
-        series2.dataFields.dateX = "year1";
-        series2.dataFields.valueY = "worldwide_earnings1";
-        series2.yAxis = valueAxis2;
-        series2.xAxis = dateAxis2;
-        series2.tooltipText = "Average Worldwide Earnings: {worldwide_earnings1}";
-        series2.fill = am4core.color("#FF0000");
-        series2.stroke = am4core.color("#FF0000");
-        series2.strokeWidth = 2;
-    
-        series2.tooltip.background.cornerRadius = 20;
-        series2.tooltip.background.strokeOpacity = 0;
-        series2.tooltip.pointerOrientation = "vertical";
-        series2.tooltip.label.minWidth = 40;
-        series2.tooltip.label.minHeight = 40;
-        series2.tooltip.label.textAlign = "middle";
-        series2.tooltip.label.textValign = "middle";
-        series2.stroke = am4core.color("#FF0000");
-        button.innerText = 'Added';
+      button.innerText = 'Added';
 
-        valueAxis2.renderer.grid.template.strokeOpacity = 0.07;
-        dateAxis2.renderer.grid.template.strokeOpacity = 0.07;
-        valueAxis2.cursorTooltipEnabled = false;
-        dateAxis2.cursorTooltipEnabled = false;
+      series2 = chart2.series.push(new am4charts.LineSeries());
+      series2.name = "Pixar Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
+      series2.dataFields.dateX = "year1";
+      series2.dataFields.valueY = "worldwide_earnings1";
+      series2.tooltipText = "Average Worldwide Earnings: {worldwide_earnings1}";
+      series2.fill = am4core.color("#FF0000");
+      series2.stroke = am4core.color("#FF0000");
+      series2.strokeWidth = 2;
 
-        chart2.cursor.lineY.disabled = true;
-        chart2.cursor.lineX.disabled = true;
+      series2.tooltip.background.cornerRadius = 20;
+      series2.tooltip.background.strokeOpacity = 0;
+      series2.tooltip.pointerOrientation = "vertical";
+      series2.tooltip.label.minWidth = 40;
+      series2.tooltip.label.minHeight = 40;
+      series2.tooltip.label.textAlign = "middle";
+      series2.tooltip.label.textValign = "middle";
+      series2.stroke = am4core.color("#FF0000");
     } else {
         // button.innerText = 'Focus';
     }
 }
 
-
 $(".timeline-wrapper .timeline-content-item > span").on("mouseenter mouseleave", function (e) {
     $(".timeline-wrapper .timeline-content-item.active").removeClass("active");
     $(this).parent().addClass("active");
 });
-    
+
 
 document.addEventListener('DOMContentLoaded', function () {
     // const lineChartDataPath =  'assets/total_movie_box.json';
     // fetchJSONFile(lineChartDataPath);
-
     am4core.ready(function() {
 
     // Themes begin
     am4core.useTheme(am4themes_animated);
     // Themes end
-    
+
     // Create chart instance
     var chart = am4core.create("lineChartDiv", am4charts.XYChart);
-    
+
     // Add data
     chart.data = totalMovieBoxData;
-    
+
     // Set input format for the dates
     chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
     chart.numberFormatter.numberFormat = "#.00 a($)";
-    
+
     // Create axes
     dateAxis = chart.xAxes.push(new am4charts.DateAxis());
 
@@ -149,12 +127,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var series = chart.series.push(new am4charts.LineSeries());
     series.dataFields.valueY = "value1";
     series.dataFields.dateX = "date1";
-    series.tooltipText = "Movie: {movie1} \n Date: {date1} \n Worldwide Earnings:{value1} "    
+    series.tooltipText = "Movie: {movie1} \n Release Date: {date1} \n Worldwide Earnings :{value1} ";
+
     series.strokeWidth = 2;
     series.minBulletDistance = 15;
 
     // Drop-shaped tooltips
     series.tooltip.background.cornerRadius = 20;
+    series.tooltip.background.opacity = 0.5;
     series.tooltip.background.strokeOpacity = 0;
     series.tooltip.pointerOrientation = "vertical";
     series.tooltip.label.minWidth = 40;
@@ -163,24 +143,25 @@ document.addEventListener('DOMContentLoaded', function () {
     series.tooltip.label.textValign = "middle";
     series.stroke = am4core.color("#00BFFF");
 
+
     // Make bullets grow on hover
     var bullet = series.bullets.push(new am4charts.CircleBullet());
     bullet.circle.strokeWidth = 2;
-
+    bullet.circle.fillOpacity = 0.9;
     bullet.adapter.add("fill",function(fill, target){
-         if(target.dataItem.valueY > 325338851){
-             return am4core.color("#FF0000");
+      if(target.dataItem.valueY >= 325338851){
+           return am4core.color("#FF0000");
          }
          return fill;
     })
-    bullet.circle.radius = 4;
+    bullet.circle.radius = 5;
+    bullet.circle.stroke = am4core.color("#00BFFF");
     bullet.fill = "#fff";
-
     console.log(bullet.circle);
-    
+
     var bullethover = bullet.states.create("hover");
     bullethover.properties.scale = 1.3;
-      
+
     // Make a panning cursor
     chart.cursor = new am4charts.XYCursor();
     chart.cursor.behavior = "panXY";
@@ -191,12 +172,12 @@ document.addEventListener('DOMContentLoaded', function () {
     chart.scrollbarY = new am4core.Scrollbar();
     chart.scrollbarY.parent = chart.leftAxesContainer;
     chart.scrollbarY.toBack();
-    
+
     // Create a horizontal scrollbar with previe and place it underneath the date axis
     chart.scrollbarX = new am4charts.XYChartScrollbar();
     chart.scrollbarX.series.push(series);
     chart.scrollbarX.parent = chart.bottomAxesContainer;
-    
+
     dateAxis.start = 0;
     dateAxis.end = 1;
     dateAxis.keepSelection = true;
@@ -205,7 +186,11 @@ document.addEventListener('DOMContentLoaded', function () {
     dateAxis.cursorTooltipEnabled = false;
 
     chart.cursor.lineY.disabled = true;
-    chart.cursor.lineX.disabled = true;
+
+    valueAxis.title.text = "Worldwide Earnings($)";
+    valueAxis.title.fontWeight = "bold";
+    dateAxis.title.text = "Year";
+    dateAxis.title.fontWeight = "bold";
     }); // end am4core.ready()
 
     am4core.ready(function() {
@@ -213,43 +198,32 @@ document.addEventListener('DOMContentLoaded', function () {
         // Themes begin
         am4core.useTheme(am4themes_animated);
         // Themes end
-        
+
         // Create chart
         chart2 = am4core.create("lineChartDiv2", am4charts.XYChart);
-        
+
         chart2.dateFormatter.inputDateFormat = "yyyy";
         chart2.numberFormatter.numberFormat = "#.00 a($)";
         chart2.data = comparsionData;
-        
+
         var dateAxis = chart2.xAxes.push(new am4charts.DateAxis());
         dateAxis.renderer.grid.template.location = 0;
         dateAxis.renderer.labels.template.fill = am4core.color("black");
-        
-        // var dateAxis2 = chart2.xAxes.push(new am4charts.DateAxis());
-        // dateAxis2.renderer.grid.template.location = 0;
-        // dateAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");//used to hide
-        
+
         var valueAxis = chart2.yAxes.push(new am4charts.ValueAxis());
         valueAxis.tooltip.disabled = false;
         valueAxis.renderer.labels.template.fill = am4core.color("#black"); //used to hide
-        
         valueAxis.renderer.minWidth = 60;
-        
-        // var valueAxis2 = chart2.yAxes.push(new am4charts.ValueAxis());
-        // valueAxis2.tooltip.disabled = false;
-        // valueAxis2.renderer.grid.template.strokeDasharray = "2,3";
-        // valueAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");
-        // valueAxis2.renderer.minWidth = 60;
-        
+
         var series = chart2.series.push(new am4charts.LineSeries());
-        series.name = "disney"; //disney,pixar colors are inversed because of incorrect labels
+        series.name = "Disney Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
         series.dataFields.dateX = "year2";
         series.dataFields.valueY = "worldwide_earnings2";
         series.tooltipText = "Average Worldwide Earnings: {worldwide_earnings2}";
         series.fill = am4core.color("#00BFFF"); //FF0000
-        series.stroke = am4core.color("#00BFFF"); 
+        series.stroke = am4core.color("#00BFFF");
         series.strokeWidth = 2;
-        
+
         series.tooltip.background.cornerRadius = 20;
         series.tooltip.background.strokeOpacity = 0;
         series.tooltip.pointerOrientation = "vertical";
@@ -259,50 +233,28 @@ document.addEventListener('DOMContentLoaded', function () {
         series.tooltip.label.textValign = "middle";
         series.stroke = am4core.color("#00BFFF");
 
-        
-        // series2 = chart2.series.push(new am4charts.LineSeries());
-        // series2.name = "pixar"; //disney,pixar colors are inversed because of incorrect labels
-        // series2.dataFields.dateX = "year1";
-        // series2.dataFields.valueY = "worldwide_earnings1";
-        // series2.yAxis = valueAxis2;
-        // series2.xAxis = dateAxis2;
-        // series2.tooltipText = "Average Worldwide Earnings: {worldwide_earnings1}";
-        // series2.fill = am4core.color("#FF0000");
-        // series2.stroke = am4core.color("#FF0000");
-        // series2.strokeWidth = 2;
-
-        // series2.tooltip.background.cornerRadius = 20;
-        // series2.tooltip.background.strokeOpacity = 0;
-        // series2.tooltip.pointerOrientation = "vertical";
-        // series2.tooltip.label.minWidth = 40;
-        // series2.tooltip.label.minHeight = 40;
-        // series2.tooltip.label.textAlign = "middle";
-        // series2.tooltip.label.textValign = "middle";
-        // series2.stroke = am4core.color("#FF0000");
-
-
         chart2.cursor = new am4charts.XYCursor();
         chart2.cursor.behavior = "panXY"
         chart2.cursor.xAxis = dateAxis;
-        
+
         chart2.legend = new am4charts.Legend();
         chart2.legend.parent = chart2.plotContainer;
         chart2.legend.zIndex = 100;
-        
 
         dateAxis.renderer.grid.template.strokeOpacity = 0.07;
         valueAxis.renderer.grid.template.strokeOpacity = 0.07;
-    
+
         valueAxis.cursorTooltipEnabled = false;
-        dateAxis.cursorTooltipEnabled = false;
+        dateAxis.cursorTooltipEnabled = true;
+        chart2.cursor.lineY.disabled = true;
+        chart2.cursor.lineX.disabled = false;
 
-        // valueAxis2.renderer.grid.template.strokeOpacity = 0.07;
-        // dateAxis2.renderer.grid.template.strokeOpacity = 0.07;
-        // valueAxis2.cursorTooltipEnabled = false;
-        // dateAxis2.cursorTooltipEnabled = false;
-
-        // chart2.cursor.lineY.disabled = true;
-        // chart2.cursor.lineX.disabled = true;
+        valueAxis.title.text = 'Average Worldwide Earnings($)';
+        valueAxis.title.fontSize = 13;
+        valueAxis.title.fontWeight = 800;
+        dateAxis.title.text = 'Year';
+        dateAxis.title.fontSize = 13;
+        dateAxis.title.fontWeight = 800;
         }); // end am4core.ready()
 
     am4core.ready(function() {
@@ -310,43 +262,32 @@ document.addEventListener('DOMContentLoaded', function () {
         // Themes begin
         am4core.useTheme(am4themes_animated);
         // Themes end
-        
+
         // Create chart
         var chart3 = am4core.create("lineChartDiv3", am4charts.XYChart);
-        
+
         chart3.dateFormatter.inputDateFormat = "yyyy";
-        chart3.numberFormatter.numberFormat = "#.0 (votes)";
+        chart3.numberFormatter.numberFormat = "#.0";
         chart3.data = comparsionData;
-        
+
         var dateAxis = chart3.xAxes.push(new am4charts.DateAxis());
         dateAxis.renderer.grid.template.location = 0;
         dateAxis.renderer.labels.template.fill = am4core.color("black");
-        
-        var dateAxis2 = chart3.xAxes.push(new am4charts.DateAxis());
-        dateAxis2.renderer.grid.template.location = 0;
-        dateAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");//used to hide
-        
+
         var valueAxis = chart3.yAxes.push(new am4charts.ValueAxis());
         valueAxis.tooltip.disabled = false;
         valueAxis.renderer.labels.template.fill = am4core.color("#black"); //used to hide
-        
         valueAxis.renderer.minWidth = 60;
-        
-        var valueAxis2 = chart3.yAxes.push(new am4charts.ValueAxis());
-        valueAxis2.tooltip.disabled = false;
-        valueAxis2.renderer.grid.template.strokeDasharray = "2,3";
-        valueAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");
-        valueAxis2.renderer.minWidth = 60;
-        
+
         var series = chart3.series.push(new am4charts.LineSeries());
-        series.name = "disney"; //disney,pixar colors are inversed because of incorrect labels
+        series.name = "Disney Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
         series.dataFields.dateX = "year2";
         series.dataFields.valueY = "rating2";
         series.tooltipText = "Average Ratings: {rating2}";
         series.fill = am4core.color("#00BFFF"); //FF0000
-        series.stroke = am4core.color("#00BFFF"); 
+        series.stroke = am4core.color("#00BFFF");
         series.strokeWidth = 2;
-        
+
         series.tooltip.background.cornerRadius = 20;
         series.tooltip.background.strokeOpacity = 0;
         series.tooltip.pointerOrientation = "vertical";
@@ -356,132 +297,100 @@ document.addEventListener('DOMContentLoaded', function () {
         series.tooltip.label.textValign = "middle";
         series.stroke = am4core.color("#00BFFF");
 
-        
-        series2 = chart3.series.push(new am4charts.LineSeries());
-        series2.name = "pixar"; //disney,pixar colors are inversed because of incorrect labels
-        series2.dataFields.dateX = "year1";
-        series2.dataFields.valueY = "rating1";
-        series2.yAxis = valueAxis2;
-        series2.xAxis = dateAxis2;
-        series2.tooltipText = "Average Ratings: {rating1}";
-        series2.fill = am4core.color("#FF0000");
-        series2.stroke = am4core.color("#FF0000");
-        series2.strokeWidth = 2;
+        series3 = chart3.series.push(new am4charts.LineSeries());
+        series3.name = "Pixar Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
+        series3.dataFields.dateX = "year1";
+        series3.dataFields.valueY = "rating1";
+        series3.tooltipText = "Average Ratings: {rating1}";
+        series3.fill = am4core.color("#FF0000");
+        series3.stroke = am4core.color("#FF0000");
+        series3.strokeWidth = 2;
 
-        series2.tooltip.background.cornerRadius = 20;
-        series2.tooltip.background.strokeOpacity = 0;
-        series2.tooltip.pointerOrientation = "vertical";
-        series2.tooltip.label.minWidth = 40;
-        series2.tooltip.label.minHeight = 40;
-        series2.tooltip.label.textAlign = "middle";
-        series2.tooltip.label.textValign = "middle";
-        series2.stroke = am4core.color("#FF0000");
-
+        series3.tooltip.background.cornerRadius = 20;
+        series3.tooltip.background.strokeOpacity = 0;
+        series3.tooltip.pointerOrientation = "vertical";
+        series3.tooltip.label.minWidth = 40;
+        series3.tooltip.label.minHeight = 40;
+        series3.tooltip.label.textAlign = "middle";
+        series3.tooltip.label.textValign = "middle";
+        series3.stroke = am4core.color("#FF0000");
 
         chart3.cursor = new am4charts.XYCursor();
         chart3.cursor.behavior = "panXY"
-        chart3.cursor.xAxis = dateAxis2;
-        
+        chart3.cursor.xAxis = dateAxis;
+
         chart3.legend = new am4charts.Legend();
+        chart3.legend.valign = 'bottom';
         chart3.legend.parent = chart3.plotContainer;
         chart3.legend.zIndex = 100;
-        
-        valueAxis2.renderer.grid.template.strokeOpacity = 0.07;
-        dateAxis2.renderer.grid.template.strokeOpacity = 0.07;
-        dateAxis.renderer.grid.template.strokeOpacity = 0.07;
-        valueAxis.renderer.grid.template.strokeOpacity = 0.07;
-    
+
         valueAxis.cursorTooltipEnabled = false;
-        dateAxis.cursorTooltipEnabled = false;
-
-        valueAxis2.cursorTooltipEnabled = false;
-        dateAxis2.cursorTooltipEnabled = false;
-
+        dateAxis.cursorTooltipEnabled = true;
         chart3.cursor.lineY.disabled = true;
-        chart3.cursor.lineX.disabled = true;
+        chart3.cursor.lineX.disabled = false;
+
+        valueAxis.title.text = 'Average Rating';
+        valueAxis.title.fontSize = 13;
+        valueAxis.title.fontWeight = 800;
+        dateAxis.title.text = 'Year';
+        dateAxis.title.fontSize = 13;
+        dateAxis.title.fontWeight = 800;
         }); // end am4core.ready()
 
+
     am4core.ready(function(){
 
             am4core.useTheme(am4themes_animated);
             var chart = am4core.create("wordCloudDiv1", am4plugins_wordCloud.WordCloud);
-        
+
             chart.data = disneyMovie90;
-        
+
             var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
-        
+
             series.dataFields.word = "tag";
             series.dataFields.value = "count";
-        
+
             series.heatRules.push({
               "target": series.labels.template,
               "property": "fill",
-              "min": am4core.color("#0000CC"),
-              "max": am4core.color("#CC00CC"),
+              "min": am4core.color("#00BFFF"),
+              "max": am4core.color("#000080"),
               "dataField": "value"});
-        
+
             var hoverState = series.labels.template.states.create("hover");
-            hoverState.properties.fill = am4core.color("#FF0000");
-        
+            series.labels.template.tooltipText = "{word}: {value}";
+
             var title = chart.titles.create();
-            title.text = "Disney Movies Most Genres in 1990's";
-            title.fontSize = 20;
+            title.text = "Disney Movies Genre Counts in 1990's";
+            title.fontSize = 17;
             title.fontWeight = "800";
         });
 
-    am4core.ready(function(){
-
-            am4core.useTheme(am4themes_animated);
-            var chart = am4core.create("wordCloudDiv1", am4plugins_wordCloud.WordCloud);
-        
-            chart.data = disneyMovie00;
-        
-            var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
-        
-            series.dataFields.word = "tag";
-            series.dataFields.value = "count";
-        
-            series.heatRules.push({
-              "target": series.labels.template,
-              "property": "fill",
-              "min": am4core.color("#0000CC"),
-              "max": am4core.color("#CC00CC"),
-              "dataField": "value"});
-        
-            var hoverState = series.labels.template.states.create("hover");
-            hoverState.properties.fill = am4core.color("#FF0000");
-        
-            var title = chart.titles.create();
-            title.text = "Disney Movies Most Genres in 1990's";
-            title.fontSize = 20;
-            title.fontWeight = "800";
-        });
-        
     am4core.ready(function(){
 
             am4core.useTheme(am4themes_animated);
             var chart = am4core.create("wordCloudDiv2", am4plugins_wordCloud.WordCloud);
-        
+
             chart.data = disneyMovie00;
-        
+
             var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
-        
+
             series.dataFields.word = "tag";
             series.dataFields.value = "count";
-        
+
             series.heatRules.push({
               "target": series.labels.template,
               "property": "fill",
-              "min": am4core.color("#0000CC"),
-              "max": am4core.color("#CC00CC"),
+              "min": am4core.color("#00BFFF"),
+              "max": am4core.color("#000080"),
               "dataField": "value"});
-        
+
             var hoverState = series.labels.template.states.create("hover");
-            hoverState.properties.fill = am4core.color("#FF0000");
-        
+            series.labels.template.tooltipText = "{word}: {value}";
+
             var title = chart.titles.create();
-            title.text = "Disney Movies Most Genres in 2000's";
-            title.fontSize = 20;
+            title.text = "Disney Movies Genre Counts in 2000's";
+            title.fontSize = 17;
             title.fontWeight = "800";
         });
 
@@ -489,27 +398,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
             am4core.useTheme(am4themes_animated);
             var chart = am4core.create("wordCloudDiv3", am4plugins_wordCloud.WordCloud);
-        
+
             chart.data = disneyMovie10;
-        
+
             var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
-        
+
             series.dataFields.word = "tag";
             series.dataFields.value = "count";
-        
+
             series.heatRules.push({
               "target": series.labels.template,
               "property": "fill",
-              "min": am4core.color("#0000CC"),
-              "max": am4core.color("#CC00CC"),
+              "min": am4core.color("#00BFFF"),
+              "max": am4core.color("#000080"),
               "dataField": "value"});
-        
+
             var hoverState = series.labels.template.states.create("hover");
-            hoverState.properties.fill = am4core.color("#FF0000");
-        
+            series.labels.template.tooltipText = "{word}: {value}";
+
             var title = chart.titles.create();
-            title.text = "Disney Movies Most Genres in 2010's";
-            title.fontSize = 20;
+            title.text = "Disney Movies Genre Counts in 2010's";
+            title.fontSize = 17;
             title.fontWeight = "800";
         });
 });

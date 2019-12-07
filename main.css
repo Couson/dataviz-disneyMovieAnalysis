@@ -9,14 +9,19 @@
     margin: 0;
 } */
 
-
+h3 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 24px;
+}
 h2 {
+    text-align: center;
     color: wheat;
 }
 
 body {
     background-color: #F5F5F5;
-    max-width: 100%;
+    /* max-width: 100%; */
     width: 100%;
     margin-left: 0;
     margin-right: 0;
@@ -24,8 +29,8 @@ body {
     margin-bottom: 0;
 
     background-color: grey;
-    background-image: url('assets/v_01.mp4');
-    /* background-image: url('https://youtu.be/HSzx-zryEgM'); */
+    /* background-image: url('assets/v_01.mp4'); */
+    background-image: url('https://www.youtube.com/watch?v=vBLXhx9vdHg');
     background-repeat: no-repeat;
     background-position: center top;
     background-attachment: fixed;  
