@@ -1,5 +1,7 @@
-totalMovieBoxData = [{"date":"1950-02-15","value":10000000,"movie":"Cinderella"},{"date":"1951-07-26","value":0,"movie":"Alice in Wonderland"},{"date":"1953-02-05","value":40759520,"movie":"Peter Pan"},{"date":"1955-06-16","value":36359037,"movie":"Lady and the Tramp"},{"date":"1959-01-29","value":36479805,"movie":"Sleeping Beauty"},{"date":"1961-01-25","value":85000000,"movie":"One Hundred and One Dalmatians"},{"date":"1963-12-25","value":12000000,"movie":"The Sword in the Stone"},{"date":"1967-10-18","value":137741048,"movie":"The Jungle Book"},{"date":"1970-12-11","value":18000000,"movie":"The AristoCats"},{"date":"1977-03-11","value":0,"movie":"The Many Adventures of Winnie the Pooh"},{"date":"1977-03-11","value":29000000,"movie":"The Rescuers"},{"date":"1977-06-19","value":0,"movie":"The Many Adventures of Winnie the Pooh"},{"date":"1981-07-10","value":39900000,"movie":"The Fox and the Hound"},{"date":"1985-07-24","value":21288692,"movie":"The Black Cauldron"},{"date":"1986-06-23","value":25336794,"movie":"The Great Mouse Detective"},{"date":"1988-11-13","value":53279055,"movie":"Oliver & Company"},{"date":"1989-11-13","value":184155863,"movie":"The Little Mermaid"},{"date":"1990-11-16","value":27931461,"movie":"The Rescuers Down Under"},{"date":"1991-09-29","value":331907151,"movie":"Beauty and the Beast"},{"date":"1992-11-08","value":504050219,"movie":"Aladdin"},{"date":"1994-12-08","value":968511805,"movie":"The Lion King"},{"date":"1995-06-15","value":346079773,"movie":"Pocahontas"},{"date":"1996-06-19","value":325338851,"movie":"The Hunchback of Notre Dame"},{"date":"1997-06-13","value":252712101,"movie":"Hercules"},{"date":"1998-06-05","value":304320254,"movie":"Mulan"},{"date":"1999-06-12","value":448191819,"movie":"Tarzan"},{"date":"1999-12-17","value":90874570,"movie":"Fantasia 2000"},{"date":"2000-05-13","value":169327687,"movie":"The Emperor's New Groove"},{"date":"2000-12-10","value":349822765,"movie":"Dinosaur"},{"date":"2001-06-02","value":186053725,"movie":"Atlantis: The Lost Empire"},{"date":"2002-06-16","value":273144151,"movie":"Lilo & Stitch"},{"date":"2002-11-05","value":109578115,"movie":"Treasure Planet"},{"date":"2003-10-20","value":250397798,"movie":"Brother Bear"},{"date":"2004-03-21","value":103951461,"movie":"Home on the Range"},{"date":"2005-10-30","value":314432837,"movie":"Chicken Little"},{"date":"2007-03-23","value":169333034,"movie":"Meet the Robinsons"},{"date":"2008-11-17","value":309979994,"movie":"Bolt"},{"date":"2009-11-25","value":267045765,"movie":"The Princess and the Frog"},{"date":"2010-11-24","value":591794936,"movie":"Tangled"},{"date":"2012-11-01","value":471222889,"movie":"Wreck-It Ralph"},{"date":"2013-11-10","value":1274219009,"movie":"Frozen"},{"date":"2014-10-23","value":657827828,"movie":"Big Hero 6"},{"date":"2016-02-11","value":1023784195,"movie":"Zootopia"},{"date":"2016-11-14","value":643331111,"movie":"Moana"},{"date":"2018-11-05","value":529323962,"movie":"Ralph Breaks the Internet"},{"date":"2019-11-07","value":756140237,"movie":"Frozen II"}];
+totalMovieBoxData = [{"movie1": "Cinderella", "date1": "1950-02-15", "value1": 10000000}, {"movie1": "Peter Pan", "date1": "1953-02-05", "value1": 40759520}, {"movie1": "Lady and the Tramp", "date1": "1955-06-16", "value1": 36359037}, {"movie1": "Sleeping Beauty", "date1": "1959-01-29", "value1": 36479805}, {"movie1": "One Hundred and One Dalmatians", "date1": "1961-01-25", "value1": 85000000}, {"movie1": "The Sword in the Stone", "date1": "1963-12-25", "value1": 12000000}, {"movie1": "The Jungle Book", "date1": "1967-10-18", "value1": 137741048}, {"movie1": "The AristoCats", "date1": "1970-12-11", "value1": 18000000}, {"movie1": "The Rescuers", "date1": "1977-06-19", "value1": 29000000}, {"movie1": "The Fox and the Hound", "date1": "1981-07-10", "value1": 39900000}, {"movie1": "The Black Cauldron", "date1": "1985-07-24", "value1": 21288692}, {"movie1": "The Great Mouse Detective", "date1": "1986-06-23", "value1": 25336794}, {"movie1": "Oliver & Company", "date1": "1988-11-13", "value1": 53279055}, {"movie1": "The Little Mermaid", "date1": "1989-11-13", "value1": 184155863}, {"movie1": "The Rescuers Down Under", "date1": "1990-11-16", "value1": 27931461}, {"movie1": "Beauty and the Beast", "date1": "1991-09-29", "value1": 331907151, "movie2": "Beauty and the Beast"}, {"movie1": "Aladdin", "date1": "1992-11-08", "value1": 504050219, "movie2": "Aladdin"}, {"movie1": "The Lion King", "date1": "1994-12-08", "value1": 968511805, "movie2": "The Lion King"}, {"movie1": "Pocahontas", "date1": "1995-06-15", "value1": 346079773, "movie2": "Pocahontas"}, {"movie1": "The Hunchback of Notre Dame", "date1": "1996-06-19", "value1": 325338851, "movie2": "The Hunchback of Notre Dame"}, {"movie1": "Hercules", "date1": "1997-06-13", "value1": 252712101}, {"movie1": "Mulan", "date1": "1998-06-05", "value1": 304320254}, {"movie1": "Tarzan", "date1": "1999-06-12", "value1": 448191819, "movie2": "Tarzan"}, {"movie1": "Fantasia 2000", "date1": "1999-12-17", "value1": 90874570}, {"movie1": "Dinosaur", "date1": "2000-05-13", "value1": 349822765, "movie2": "Dinosaur"}, {"movie1": "The Emperor's New Groove", "date1": "2000-12-10", "value1": 169327687}, {"movie1": "Atlantis: The Lost Empire", "date1": "2001-06-02", "value1": 186053725}, {"movie1": "Lilo & Stitch", "date1": "2002-06-16", "value1": 273144151}, {"movie1": "Treasure Planet", "date1": "2002-11-05", "value1": 109578115}, {"movie1": "Brother Bear", "date1": "2003-10-20", "value1": 250397798}, {"movie1": "Home on the Range", "date1": "2004-03-21", "value1": 103951461}, {"movie1": "Chicken Little", "date1": "2005-10-30", "value1": 314432837}, {"movie1": "Meet the Robinsons", "date1": "2007-03-23", "value1": 169333034}, {"movie1": "Bolt", "date1": "2008-11-17", "value1": 309979994}, {"movie1": "The Princess and the Frog", "date1": "2009-11-25", "value1": 267045765}, {"movie1": "Tangled", "date1": "2010-11-24", "value1": 591794936, "movie2": "Tangled"}, {"movie1": "Wreck-It Ralph", "date1": "2012-11-01", "value1": 471222889, "movie2": "Wreck-It Ralph"}, {"movie1": "Frozen", "date1": "2013-11-10", "value1": 1274219009, "movie2": "Frozen"}, {"movie1": "Big Hero 6", "date1": "2014-10-23", "value1": 657827828, "movie2": "Big Hero 6"}, {"movie1": "Zootopia", "date1": "2016-02-11", "value1": 1023784195, "movie2": "Zootopia"}, {"movie1": "Moana", "date1": "2016-11-14", "value1": 643331111, "movie2": "Moana"}, {"movie1": "Ralph Breaks the Internet", "date1": "2018-11-05", "value1": 529323962, "movie2": "Ralph Breaks the Internet"}, {"movie1": "Frozen II", "date1": "2019-11-07", "value1": 756140237, "movie2": "Frozen II"}];
 
+comparsionData = [{"year2": "1995", "rating2": 6.7, "international_earnings2": 204500000.0, "domestic_earnings2": 141579773.0, "worldwide_earnings2": 346079773.0}, {"year2": "1996", "rating2": 6.9, "international_earnings2": 225200000.0, "domestic_earnings2": 100138851.0, "worldwide_earnings2": 325338851.0}, {"year2": "1997", "rating2": 7.3, "international_earnings2": 153600000.0, "domestic_earnings2": 99112101.0, "worldwide_earnings2": 252712101.0}, {"year2": "1998", "rating2": 7.6, "international_earnings2": 183700000.0, "domestic_earnings2": 120620254.0, "worldwide_earnings2": 304320254.0}, {"year2": "1999", "rating2": 7.25, "international_earnings2": 153659575.0, "domestic_earnings2": 115873619.5, "worldwide_earnings2": 269533194.5}, {"year2": "2000", "rating2": 6.9, "international_earnings2": 146049851.0, "domestic_earnings2": 113525375.0, "worldwide_earnings2": 259575226.0}, {"year2": "2001", "rating2": 6.9, "international_earnings2": 101997253.0, "domestic_earnings2": 84056472.0, "worldwide_earnings2": 186053725.0}, {"year2": "2002", "rating2": 7.2, "international_earnings2": 99375572.5, "domestic_earnings2": 91985560.5, "worldwide_earnings2": 191361133.0}, {"year2": "2003", "rating2": 6.8, "international_earnings2": 165061521.0, "domestic_earnings2": 85336277.0, "worldwide_earnings2": 250397798.0}, {"year2": "2004", "rating2": 5.3, "international_earnings2": 53921000.0, "domestic_earnings2": 50030461.0, "worldwide_earnings2": 103951461.0}, {"year2": "2005", "rating2": 5.7, "international_earnings2": 179046172.0, "domestic_earnings2": 135386665.0, "worldwide_earnings2": 314432837.0}, {"year2": "2007", "rating2": 6.8, "international_earnings2": 71510863.0, "domestic_earnings2": 97822171.0, "worldwide_earnings2": 169333034.0}, {"year2": "2008", "rating2": 6.8, "international_earnings2": 195926415.0, "domestic_earnings2": 114053579.0, "worldwide_earnings2": 309979994.0}, {"year2": "2009", "rating2": 7.1, "international_earnings2": 162644866.0, "domestic_earnings2": 104400899.0, "worldwide_earnings2": 267045765.0}, {"year2": "2010", "rating2": 7.7, "international_earnings2": 390973000.0, "domestic_earnings2": 200821936.0, "worldwide_earnings2": 591794936.0}, {"year2": "2012", "rating2": 7.7, "international_earnings2": 281800000.0, "domestic_earnings2": 189422889.0, "worldwide_earnings2": 471222889.0}, {"year2": "2013", "rating2": 7.5, "international_earnings2": 873481000.0, "domestic_earnings2": 400738009.0, "worldwide_earnings2": 1274219009.0}, {"year2": "2014", "rating2": 7.8, "international_earnings2": 435300000.0, "domestic_earnings2": 222527828.0, "worldwide_earnings2": 657827828.0}, {"year2": "2016", "rating2": 7.8, "international_earnings2": 538545007.0, "domestic_earnings2": 295012646.0, "worldwide_earnings2": 833557653.0}, {"year2": "2018", "rating2": 7.1, "international_earnings2": 328232251.0, "domestic_earnings2": 201091711.0, "worldwide_earnings2": 529323962.0}, {"year2": "2019", "rating2": 7.3, "international_earnings2": 453215336.0, "domestic_earnings2": 302924901.0, "worldwide_earnings2": 756140237.0},
+{"year1": "1995", "rating1": 8.3, "international_earnings1": 181757800.0, "domestic_earnings1": 191796233.0, "worldwide_earnings1": 373554033.0}, {"year1": "1998", "rating1": 7.2, "international_earnings1": 200460294.0, "domestic_earnings1": 162798565.0, "worldwide_earnings1": 363258859.0}, {"year1": "1999", "rating1": 7.9, "international_earnings1": 251514690.0, "domestic_earnings1": 245852179.0, "worldwide_earnings1": 497366869.0}, {"year1": "2001", "rating1": 8.0, "international_earnings1": 272900000.0, "domestic_earnings1": 255873250.0, "worldwide_earnings1": 528773250.0}, {"year1": "2003", "rating1": 8.1, "international_earnings1": 531300000.0, "domestic_earnings1": 339714978.0, "worldwide_earnings1": 871014978.0}, {"year1": "2004", "rating1": 8.0, "international_earnings1": 370001000.0, "domestic_earnings1": 261441092.0, "worldwide_earnings1": 631442092.0}, {"year1": "2006", "rating1": 7.1, "international_earnings1": 217900167.0, "domestic_earnings1": 244082982.0, "worldwide_earnings1": 461983149.0}, {"year1": "2007", "rating1": 8.0, "international_earnings1": 417277164.0, "domestic_earnings1": 206445654.0, "worldwide_earnings1": 623722818.0}, {"year1": "2008", "rating1": 8.4, "international_earnings1": 297503696.0, "domestic_earnings1": 223808164.0, "worldwide_earnings1": 521311860.0}, {"year1": "2009", "rating1": 8.2, "international_earnings1": 442094918.0, "domestic_earnings1": 293004164.0, "worldwide_earnings1": 735099082.0}, {"year1": "2010", "rating1": 8.3, "international_earnings1": 651964823.0, "domestic_earnings1": 415004880.0, "worldwide_earnings1": 1066969703.0}, {"year1": "2011", "rating1": 6.1, "international_earnings1": 368400000.0, "domestic_earnings1": 191452396.0, "worldwide_earnings1": 559852396.0}, {"year1": "2012", "rating1": 7.1, "international_earnings1": 301700000.0, "domestic_earnings1": 237283207.0, "worldwide_earnings1": 538983207.0}, {"year1": "2013", "rating1": 7.3, "international_earnings1": 475066843.0, "domestic_earnings1": 268492764.0, "worldwide_earnings1": 743559607.0}, {"year1": "2015", "rating1": 7.449999999999999, "international_earnings1": 355135007.0, "domestic_earnings1": 239774415.5, "worldwide_earnings1": 594909422.5}, {"year1": "2016", "rating1": 7.3, "international_earnings1": 542275328.0, "domestic_earnings1": 486295561.0, "worldwide_earnings1": 1028570889.0}, {"year1": "2017", "rating1": 7.550000000000001, "international_earnings1": 414192861.0, "domestic_earnings1": 181313565.0, "worldwide_earnings1": 595506426.0}, {"year1": "2018", "rating1": 7.7, "international_earnings1": 634223615.0, "domestic_earnings1": 608581744.0, "worldwide_earnings1": 1242805359.0}, {"year1": "2019", "rating1": 7.9, "international_earnings1": 639356585.0, "domestic_earnings1": 434038008.0, "worldwide_earnings1": 1073394593.0}];
 // When the user scrolls the page, execute myFunction 
 window.onscroll = function() {myFunction()};
 
@@ -25,6 +27,46 @@ function showFocus() {
     }
 
     // button.
+}
+
+function addPixar() {
+    var button = document.getElementById('adder');
+    if (button.innerText == 'Add Pixar') {
+          
+        var dateAxis2 = chart2.xAxes.push(new am4charts.DateAxis());
+        dateAxis2.renderer.grid.template.location = 0;
+        dateAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");//used to hide
+        
+        var valueAxis2 = chart2.yAxes.push(new am4charts.ValueAxis());
+        valueAxis2.tooltip.disabled = false;
+        valueAxis2.renderer.grid.template.strokeDasharray = "2,3";
+        valueAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");
+        valueAxis2.renderer.minWidth = 60;
+    
+        series2 = chart2.series.push(new am4charts.LineSeries());
+        series2.name = "pixar"; //disney,pixar colors are inversed because of incorrect labels
+        series2.dataFields.dateX = "year1";
+        series2.dataFields.valueY = "worldwide_earnings1";
+        series2.yAxis = valueAxis2;
+        series2.xAxis = dateAxis2;
+        series2.tooltipText = "Average Worldwide Earnings: {worldwide_earnings1}";
+        series2.fill = am4core.color("#FF0000");
+        series2.stroke = am4core.color("#FF0000");
+        series2.strokeWidth = 2;
+    
+        series2.tooltip.background.cornerRadius = 20;
+        series2.tooltip.background.strokeOpacity = 0;
+        series2.tooltip.pointerOrientation = "vertical";
+        series2.tooltip.label.minWidth = 40;
+        series2.tooltip.label.minHeight = 40;
+        series2.tooltip.label.textAlign = "middle";
+        series2.tooltip.label.textValign = "middle";
+        series2.stroke = am4core.color("#FF0000");
+        button.innerText = 'Added';
+    } else {
+        // button.innerText = 'Focus';
+    }
+  
 }
 
 
@@ -56,16 +98,17 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Create axes
     dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+
     var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
-    
+
     // Create series
     var series = chart.series.push(new am4charts.LineSeries());
-    series.dataFields.valueY = "value";
-    series.dataFields.dateX = "date";
-    series.tooltipText = "{movie}"
+    series.dataFields.valueY = "value1";
+    series.dataFields.dateX = "date1";
+    series.tooltipText = "Movie: {movie1} \n Date: {date1} \n Worldwide Earnings:{value1} "    
     series.strokeWidth = 2;
     series.minBulletDistance = 15;
-    
+
     // Drop-shaped tooltips
     series.tooltip.background.cornerRadius = 20;
     series.tooltip.background.strokeOpacity = 0;
@@ -74,23 +117,32 @@ document.addEventListener('DOMContentLoaded', function () {
     series.tooltip.label.minHeight = 40;
     series.tooltip.label.textAlign = "middle";
     series.tooltip.label.textValign = "middle";
-    
+    series.stroke = am4core.color("#00BFFF");
+
     // Make bullets grow on hover
     var bullet = series.bullets.push(new am4charts.CircleBullet());
     bullet.circle.strokeWidth = 2;
+
+    bullet.adapter.add("fill",function(fill, target){
+         if(target.dataItem.valueY > 325338851){
+             return am4core.color("#FF0000");
+         }
+         return fill;
+    })
     bullet.circle.radius = 4;
-    bullet.circle.fill = am4core.color("#fff");
+    bullet.fill = "#fff";
+
     console.log(bullet.circle);
     
     var bullethover = bullet.states.create("hover");
     bullethover.properties.scale = 1.3;
-    
+      
     // Make a panning cursor
     chart.cursor = new am4charts.XYCursor();
     chart.cursor.behavior = "panXY";
     chart.cursor.xAxis = dateAxis;
     chart.cursor.snapToSeries = series;
-    
+
     // Create vertical scrollbar and place it before the value axis
     chart.scrollbarY = new am4core.Scrollbar();
     chart.scrollbarY.parent = chart.leftAxesContainer;
@@ -104,7 +156,111 @@ document.addEventListener('DOMContentLoaded', function () {
     dateAxis.start = 0;
     dateAxis.end = 1;
     dateAxis.keepSelection = true;
-    
-    
+
+    valueAxis.cursorTooltipEnabled = false;
+    dateAxis.cursorTooltipEnabled = false;
+
+    chart.cursor.lineY.disabled = true;
+    chart.cursor.lineX.disabled = true;
     }); // end am4core.ready()
+
+    am4core.ready(function() {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+        
+        // Create chart
+        chart2 = am4core.create("lineChartDiv2", am4charts.XYChart);
+        
+        chart2.dateFormatter.inputDateFormat = "yyyy";
+        chart2.numberFormatter.numberFormat = "#.00 a($)";
+        chart2.data = comparsionData;
+        
+        var dateAxis = chart2.xAxes.push(new am4charts.DateAxis());
+        dateAxis.renderer.grid.template.location = 0;
+        dateAxis.renderer.labels.template.fill = am4core.color("black");
+        
+        // var dateAxis2 = chart2.xAxes.push(new am4charts.DateAxis());
+        // dateAxis2.renderer.grid.template.location = 0;
+        // dateAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");//used to hide
+        
+        var valueAxis = chart2.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.tooltip.disabled = false;
+        valueAxis.renderer.labels.template.fill = am4core.color("#black"); //used to hide
+        
+        valueAxis.renderer.minWidth = 60;
+        
+        // var valueAxis2 = chart2.yAxes.push(new am4charts.ValueAxis());
+        // valueAxis2.tooltip.disabled = false;
+        // valueAxis2.renderer.grid.template.strokeDasharray = "2,3";
+        // valueAxis2.renderer.labels.template.fill = am4core.color("#F5F5F5");
+        // valueAxis2.renderer.minWidth = 60;
+        
+        var series = chart2.series.push(new am4charts.LineSeries());
+        series.name = "disney"; //disney,pixar colors are inversed because of incorrect labels
+        series.dataFields.dateX = "year2";
+        series.dataFields.valueY = "worldwide_earnings2";
+        series.tooltipText = "Average Worldwide Earnings: {worldwide_earnings2}";
+        series.fill = am4core.color("#00BFFF"); //FF0000
+        series.stroke = am4core.color("#00BFFF"); 
+        series.strokeWidth = 2;
+        
+        series.tooltip.background.cornerRadius = 20;
+        series.tooltip.background.strokeOpacity = 0;
+        series.tooltip.pointerOrientation = "vertical";
+        series.tooltip.label.minWidth = 40;
+        series.tooltip.label.minHeight = 40;
+        series.tooltip.label.textAlign = "middle";
+        series.tooltip.label.textValign = "middle";
+        series.stroke = am4core.color("#00BFFF");
+
+        
+        // series2 = chart2.series.push(new am4charts.LineSeries());
+        // series2.name = "pixar"; //disney,pixar colors are inversed because of incorrect labels
+        // series2.dataFields.dateX = "year1";
+        // series2.dataFields.valueY = "worldwide_earnings1";
+        // series2.yAxis = valueAxis2;
+        // series2.xAxis = dateAxis2;
+        // series2.tooltipText = "Average Worldwide Earnings: {worldwide_earnings1}";
+        // series2.fill = am4core.color("#FF0000");
+        // series2.stroke = am4core.color("#FF0000");
+        // series2.strokeWidth = 2;
+
+        // series2.tooltip.background.cornerRadius = 20;
+        // series2.tooltip.background.strokeOpacity = 0;
+        // series2.tooltip.pointerOrientation = "vertical";
+        // series2.tooltip.label.minWidth = 40;
+        // series2.tooltip.label.minHeight = 40;
+        // series2.tooltip.label.textAlign = "middle";
+        // series2.tooltip.label.textValign = "middle";
+        // series2.stroke = am4core.color("#FF0000");
+
+
+        chart2.cursor = new am4charts.XYCursor();
+        chart2.cursor.behavior = "panXY"
+        chart2.cursor.xAxis = dateAxis2;
+        
+        chart2.legend = new am4charts.Legend();
+        chart2.legend.parent = chart2.plotContainer;
+        chart2.legend.zIndex = 100;
+        
+        valueAxis2.renderer.grid.template.strokeOpacity = 0.07;
+        dateAxis2.renderer.grid.template.strokeOpacity = 0.07;
+        dateAxis.renderer.grid.template.strokeOpacity = 0.07;
+        valueAxis.renderer.grid.template.strokeOpacity = 0.07;
+    
+        valueAxis.cursorTooltipEnabled = false;
+        dateAxis.cursorTooltipEnabled = false;
+
+        valueAxis2.cursorTooltipEnabled = false;
+        dateAxis2.cursorTooltipEnabled = false;
+
+        chart2.cursor.lineY.disabled = true;
+        chart2.cursor.lineX.disabled = true;
+        }); // end am4core.ready()
+
+
+    
+
 });

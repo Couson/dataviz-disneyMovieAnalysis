@@ -2,14 +2,15 @@ h2 {
     color: wheat;
 }
 body {
-    background-color: rgb(194, 194, 194);
+    background-color: #F5F5F5;
+    width: 100%;
 }
 .row {
     width: 100%;
 }
 
 
-#lineChartDiv {
+#lineChartDiv  {
     top: 50%;
     width: 80%;
     height: 500px;
@@ -17,6 +18,18 @@ body {
     margin-right: 10%;
 }
 
+#lineChartDiv2 {
+    top: 50%;
+    width: 100%;
+    height: 500px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.col-lg-6 {
+    width: 50%;
+    height: 100%
+}
 
 .header {
     position: fixed;
