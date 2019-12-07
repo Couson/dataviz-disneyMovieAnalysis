@@ -16,18 +16,119 @@
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
     <script src="https://www.amcharts.com/lib/4/charts.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-
+    <script src="https://www.amcharts.com/lib/4/plugins/wordCloud.js"></script>
     <!-- <script src="https://www.amcharts.com/lib/4/geodata/continentsLow.js"></script> -->
 </head>
 
 <body>
-    <div class="header">
-        <h2>Trends Detection in the Historical Disney Animation Movie Box</h2>
-        <div class="progress-container">
-            <div class="progress-bar" id="myBar"></div>
+    <div class='row'>
+        <div class="header">
+            <h2>Trends Detection in the Historical Disney Animation Movie Box</h2>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+            </div>
         </div>
     </div>
 
+    <div class="timeline-wrapper clearfix">
+            <div class="timeline-content-day">
+                <div class="timeline-line"></div>
+                <div class="timeline-content-item active" data-timeline="hour-8">
+                    <span>Black Widow - May 2020</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img_08.jpg">
+                            <!-- <span>May 2020</span> -->
+    
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-content-item" data-timeline="hour-9">
+                    <span>The Faclcon And the Winter Soldier - Fall 2020</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img_03.jpg">
+                            <!-- <span>Fall 2020</span> -->
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-content-item" data-timeline="hour-11">
+                    <span>Shang-Chi - Feb 2021</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img_09.jpg">
+                            <!-- <span></span> -->
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-content-item" data-timeline="hour-12">
+                    <span>Wanda Vision - Spring 2021</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img_01.jpg">
+                            <!-- <span></span> -->
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-content-item" data-timeline="hour-13">
+                    <span>Doctor Strange: Multiverse Of Madness - May 7 2021</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img.jpg">
+                            <!-- <span></span> -->
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-content-item" data-timeline="hour-14">
+                    <span>Loki - Summer 2021</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img_02.jpg">
+                            <!-- <span></span> -->
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-content-item" data-timeline="hour-15">
+                    <span>What If...? - Summer 2021</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img_07.jpg">
+                            <!-- <span></span> -->
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-content-item" data-timeline="hour-16">
+                    <span>Hawkeye - Fall 2021</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img_06.jpg">
+                            <!-- <span></span> -->
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="timeline-content-item" data-timeline="hour-16">
+                    <span>Thor - Nov 5th 2021</span>
+                    <div class="timeline-content-item-reveal">
+                        <a href="#">
+                            <img src="assets/img_thor.jpg">
+                            <!-- <span></span> -->
+                        </a>
+                    </div>
+                </div>
+    
+            </div>
+    
+        </div>
+
+    <div> 
     <div class='row'>
         <div id='lineChartTitle' style='margin-top: 8%;'>
             <h3 style='text-align: center;'>Historical Moive Box for Walt
@@ -39,128 +140,52 @@
             <button id='focuser' onclick="showFocus()">Focus</button>
         </div>
     </div>
-
+    <div style = 'height: 200px; width: 100%;'></div>
     <div class='row'>
-
-        <div class = 'col-lg-6'>
-            <div id='lineChartTitle' style='margin-top: 8%;'>
-                    <h3 style='text-align: center;'>Annually Earnings Comparsion:</h3>
-                <h3 style='text-align: center;'>
-                    <a style='color: #00BFFF;'> Disney Animation Movies</a> V.S.
-                    <a style='color: #FF0000;'>Pixar Animation Movies</a></h3>
+            <div class='col-lg-4'>
+                <div id="wordCloudDiv1"></div>
             </div>
-            <div id="lineChartDiv2"></div>
-            <div>
-                <button id='adder' onclick="addPixar()">Add Pixar</button>
+            <div class='col-lg-4'>
+                <div id="wordCloudDiv2"></div>
+            </div>
+            <div class='col-lg-4'>
+                <div id="wordCloudDiv3"></div>
             </div>
         </div>
-        <div class = 'col-lg-6'>
-                <div id='lineChartTitle' style='margin-top: 8%;'>
-                    <h3 style='text-align: center;'>Annually Earnings Comparsion:</h3>
-                </div>
-                <div id="lineChartDiv3"></div>
+     <div style = 'height: 200px; width: 100%'></div>
 
+    <div class='row'>
+        <div id='lineChartTitle' style='margin-top: 8%;'>
+            <h3 style='text-align: center;'>Annually
+                <a style='color: green'>$$Earnings$$</a>
+                Comparsion:</h3>
+            <h3 style='text-align: center;'>
+                <a style='color: #00BFFF;'> Disney Animation Movies</a> V.S.
+                <a style='color: #FF0000;'>Pixar Animation Movies</a>
+            </h3>
+        </div>
+        <div id="lineChartDiv2"></div>
+        <div>
+            <button id='adder' onclick="addPixar()">Add Pixar</button>
         </div>
     </div>
 
-    <div class="timeline-wrapper clearfix">
-        <div class="timeline-content-day">
-            <div class="timeline-line"></div>
-            <div class="timeline-content-item active" data-timeline="hour-8">
-                <span>Black Widow - May 2020</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img_08.jpg">
-                        <!-- <span>May 2020</span> -->
-
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-content-item" data-timeline="hour-9">
-                <span>The Faclcon And the Winter Soldier - Fall 2020</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img_03.jpg">
-                        <!-- <span>Fall 2020</span> -->
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-content-item" data-timeline="hour-11">
-                <span>Shang-Chi - Feb 2021</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img_09.jpg">
-                        <!-- <span></span> -->
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-content-item" data-timeline="hour-12">
-                <span>Wanda Vision - Spring 2021</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img_01.jpg">
-                        <!-- <span></span> -->
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-content-item" data-timeline="hour-13">
-                <span>Doctor Strange: Multiverse Of Madness - May 7 2021</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img.jpg">
-                        <!-- <span></span> -->
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-content-item" data-timeline="hour-14">
-                <span>Loki - Summer 2021</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img_02.jpg">
-                        <!-- <span></span> -->
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-content-item" data-timeline="hour-15">
-                <span>What If...? - Summer 2021</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img_07.jpg">
-                        <!-- <span></span> -->
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-content-item" data-timeline="hour-16">
-                <span>Hawkeye - Fall 2021</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img_06.jpg">
-                        <!-- <span></span> -->
-                    </a>
-                </div>
-            </div>
-
-            <div class="timeline-content-item" data-timeline="hour-16">
-                <span>Thor - Nov 5th 2021</span>
-                <div class="timeline-content-item-reveal">
-                    <a href="#">
-                        <img src="assets/img_thor.jpg">
-                        <!-- <span></span> -->
-                    </a>
-                </div>
-            </div>
-
+    <div class='row'>
+        <div id='lineChartTitle' style='margin-top: 8%;'>
+            <h3 style='text-align: center;'>Annually
+                <a style='color: blue'>++Rating--</a>
+                Comparsion:</h3>
+            <h3 style='text-align: center;'>
+                <a style='color: #00BFFF;'> Disney Animation Movies</a> V.S.
+                <a style='color: #FF0000;'>Pixar Animation Movies</a>
+            </h3>
         </div>
+
+        <div id="lineChartDiv3"></div>
 
     </div>
     <script src='main.js'></script>
+</div>
 </body>
 
 
