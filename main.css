@@ -3,45 +3,104 @@
     background-image: url('assets/v_01.mp4');
     background-repeat: no-repeat;
     background-position: center top;
-    background-attachment: fixed;  
+    background-attachment: fixed;
     background-size: cover;
     width: 100%;
     margin: 0;
 } */
 
-h3 {
-    margin-top: 5%;
-    text-align: center;
-    font-size: 24px;
-}
-h2 {
-    text-align: center;
+
+h1 {
     color: wheat;
 }
 
-body {
-    background-color: #F5F5F5;
-    /* max-width: 100%; */
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-
-    background-color: grey;
-    /* background-image: url('assets/v_01.mp4'); */
-    background-image: url('https://www.youtube.com/watch?v=vBLXhx9vdHg');
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-attachment: fixed;  
-    background-size: cover;
-    width: 100%;
-    margin: 0;
+div{
+  font-family: "Decorative";
+  font-size: 90%;
 }
 .row {
-    max-width: 100%;
-    width: 100%;
+    width: 90%;
     background: white;
+    margin-bottom: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    opacity: 1;
+}
+
+#wordCloudDiv1{
+  height: 400px;
+}
+#wordCloudDiv2{
+  height: 400px;
+}
+#wordCloudDiv3{
+  height: 400px;
+}
+
+#lineChartDiv  {
+    top: 50%;
+    width: 80%;
+    max-width: 100%;
+    height: 550px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#lineChartDiv2 {
+    height: 550px;
+}
+
+#lineChartDiv3 {
+    height: 550px;
+}
+
+.col-lg-4 {
+    width: 33.3%;
+    float: left;
+    margin-bottom: 5%;
+    opacity: 1
+}
+
+.col-lg-6 {
+  width: 50%;
+  float:left;
+  margin-bottom: 5%;
+  opacity: 1
+}
+
+.header {
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left:0;
+    z-index: 2;
+    width: 100%;
+    max-width: 100%;
+    background-color: black;
+}
+
+  /* The progress container (grey background) */
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: #ccc;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+    height: 8px;
+    background:rgb(196, 76, 76);
+    width: 0%;
+}
+
+
+
+button {
+    /* background-color: #555555; */
+    margin-left: 50%;
+    margin-right: 50%;
+    text-align: center;
+    font-size: 16px;
 }
 
 

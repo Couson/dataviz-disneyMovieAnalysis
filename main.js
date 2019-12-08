@@ -93,10 +93,31 @@ function addPixar() {
     }
 }
 
+function addBackground(node) {
+    var body = document.getElementById('bodyBackground');
+    console.log(body);
+    body.style.backgroundImage = `url(${node})`;
+    body.style.backgroundPosition = 'fixed';
+    body.style.backgroundRepeat = 'no-repeat';
+    body.style.backgroundPosition = 'center top';
+    body.style.backgroundSize =  'cover';
+    body.style.width = '100%';
+    body.style.width = '100%';
+    body.style.margin = 0;
+}
+
 $(".timeline-wrapper .timeline-content-item > span").on("mouseenter mouseleave", function (e) {
     $(".timeline-wrapper .timeline-content-item.active").removeClass("active");
     $(this).parent().addClass("active");
 });
+
+
+$(".timeline-content-item-reveal").on("mouseenter mouseleave", function (e) {
+    path = this.getElementsByTagName('img')[0].getAttribute('src');
+    console.log(path);
+    addBackground(path);
+});
+
 
 
 document.addEventListener('DOMContentLoaded', function () {

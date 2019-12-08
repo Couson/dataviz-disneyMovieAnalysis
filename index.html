@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Movie Box Analysis</title>
+    <title>Disney Animation Studio Development Trend</title>
     <link rel='stylesheet' href='main.css'>
     <!-- External Script -->
     <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -20,15 +20,16 @@
     <!-- <script src="https://www.amcharts.com/lib/4/geodata/continentsLow.js"></script> -->
 </head>
 
-<body>
+<body id='bodyBackground'>
     <div class='row'>
         <div class="header">
-            <h2>Trends Detection in the Historical Disney Animation Movie Box</h2>
+            <h1>Disney Animation Studio Development Trend</h1>
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
             </div>
         </div>
     </div>
+
 
     <div class="timeline-wrapper clearfix">
         <div class="timeline-content-day">
@@ -184,13 +185,12 @@
         </div>
     </div>
 
-
-    <div class='row'>
+    <div style='background: white; opacity: 1; height: 2000px'>
         <div class='row'>
             <div id='lineChartTitle' style='margin-top: 8%;'>
-                <h3 style='text-align: center;'>Historical Moive Box for Walt
-                    <a style='color: #00BFFF;'>Disney</a>
-                    Animation Studio (Original Release)</h3>
+                <h2 style='text-align: center;'>Worldwide Movie Earnings for
+                    <a style='color: #00BFFF;'>Walt Disney Animation Studio</a>
+                    (Original Release)</h2>
             </div>
             <div id="lineChartDiv"></div>
             <div>
@@ -198,57 +198,40 @@
             </div>
         </div>
 
-        <div style='height: 200px; width: 100%; background: white;'>
-            <h3>What can we say about the trends of animation types in most recent decades?</h3>
-        </div>
-
         <div class='row'>
-            <div class='col-lg-4' style='background: white;'>
+            <h2 style='text-align: center;'>Disney Movie Genre Counts from 1990's to 2010's</h2>
+            <div class='col-lg-4'>
                 <div id="wordCloudDiv1"></div>
             </div>
             <div class='col-lg-4'>
-                <div id="wordCloudDiv2" style='background: white;'></div>
+                <div id="wordCloudDiv2"></div>
             </div>
             <div class='col-lg-4'>
-                <div id="wordCloudDiv3" style='background: white;'></div>
+                <div id="wordCloudDiv3"></div>
             </div>
         </div>
-        <div style='height: 200px; width: 100%; background: white;'></div>
+
 
         <div class='row'>
-            <div id='lineChartTitle'>
-                <h3 style='text-align: center;'>Annually
-                    <a style='color: green'>$$Earnings$$</a>
-                    Comparsion:</h3>
-                <h3 style='text-align: center;'>
-                    <a style='color: #00BFFF;'> Disney Animation Movies</a> V.S.
-                    <a style='color: #FF0000;'>Pixar Animation Movies</a>
-                </h3>
+            <h2 style='text-align: center;'> Disney vs Pixar Worldwide Earnings and Rating Comparison</h2>
+            <div class='col-lg-6'>
+                <h3 style='text-align: center;'>Disney vs Pixar Worldwide Earnings Comparison Since Year 1995</h3>
+                <div id="lineChartDiv2"></div>
+                <div>
+                    <button id='adder' onclick="addPixar()">Add Pixar</button>
+                </div>
             </div>
-            <div id="lineChartDiv2"></div>
-            <div>
-                <button id='adder' onclick="addPixar()">Add Pixar</button>
+            <div class='col-lg-6'>
+                <h3 style='text-align: center;'>Disney vs Pixar Average Movie Rating Comparison Since Year 1995</h3>
+                <div id="lineChartDiv3"></div>
             </div>
         </div>
-
-        <div class='row'>
-            <div id='lineChartTitle'>
-                <h3 style='text-align: center;'>Annually
-                    <a style='color: blue'>++Rating--</a>
-                    Comparsion:</h3>
-                <h3 style='text-align: center;'>
-                    <a style='color: #00BFFF;'> Disney Animation Movies</a> V.S.
-                    <a style='color: #FF0000;'>Pixar Animation Movies</a>
-                </h3>
-            </div>
-
-            <div id="lineChartDiv3"></div>
-
-        </div>
-        <script src='main.js'></script>
     </div>
+
+
+
+    <script src='main.js'></script>
+
 </body>
-
-
 
 </html>
