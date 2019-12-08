@@ -40,6 +40,44 @@ disneyMovie00 = [{ 'count': 11, 'tag': 'Adventure' },
 { 'count': 1, 'tag': 'Musical' },
 { 'count': 1, 'tag': 'Romance' }];
 
+domestic_average = {'1990': [{'sector': 'Pixar Domestic Earnings Average',
+   'size': 191796233},
+  {'sector': 'Disney Domestic Earnings Average', 'size': 927577132}],
+ '1995': [{'sector': 'Pixar Domestic Earnings Average',
+   'size': 408650744},
+  {'sector': 'Disney Domestic Earnings Average', 'size': 778669195}],
+ '2000': [{'sector': 'Pixar Domestic Earnings Average',
+   'size': 857029320},
+  {'sector': 'Disney Domestic Earnings Average', 'size': 538780996}],
+ '2005': [{'sector': 'Pixar Domestic Earnings Average',
+   'size': 1382345844},
+  {'sector': 'Disney Domestic Earnings Average', 'size': 517098585}],
+ '2010': [{'sector': 'Pixar Domestic Earnings Average',
+   'size': 1176777198},
+  {'sector': 'Disney Domestic Earnings Average', 'size': 812688726}],
+ '2015': [{'sector': 'Pixar Domestic Earnings Average',
+   'size': 1891542443},
+  {'sector': 'Disney Domestic Earnings Average', 'size': 1094041904}]};
+
+international_average = {'1990': [{'sector': 'Pixar International Earnings Average',
+   'size': 181757800},
+  {'sector': 'Disney International Earnings Average', 'size': 1222971816}],
+ '1995': [{'sector': 'Pixar International Earnings Average',
+   'size': 451974984},
+  {'sector': 'Disney International Earnings Average', 'size': 1161918852}],
+ '2000': [{'sector': 'Pixar International Earnings Average',
+   'size': 1174201000},
+  {'sector': 'Disney International Earnings Average', 'size': 698777091}],
+ '2005': [{'sector': 'Pixar International Earnings Average',
+   'size': 2026740768},
+  {'sector': 'Disney International Earnings Average', 'size': 821055144}],
+ '2010': [{'sector': 'Pixar International Earnings Average',
+   'size': 1855436857},
+  {'sector': 'Disney International Earnings Average', 'size': 1590581000}],
+ '2015': [{'sector': 'Pixar International Earnings Average',
+   'size': 2644241250},
+  {'sector': 'Disney International Earnings Average', 'size': 1858537601}]};
+
 // When the user scrolls the page, execute myFunction
 window.onscroll = function () { myFunction() };
 
@@ -446,11 +484,7 @@ document.addEventListener('DOMContentLoaded', function () {
         title.fontWeight = "800";
     });
 
-
-
-
-
-    am4core.ready(function () {
+    am4core.ready(function(){
 
         // Themes begin
         am4core.useTheme(am4themes_animated);
@@ -463,11 +497,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Create chart instance
         var chart = am4core.create("pieChartDiv1", am4charts.PieChart);
-        chart.legend.fontSize = 15;
+
         // Add data
         chart.data = [
-            { 'sector': 'Pixar International Earnings Average', 'size': 181757800 },
-            { 'sector': 'Disney International Earnings Average', 'size': 1222971816 }]
+          {'sector': 'Pixar International Earnings Average', 'size': 181757800},
+          {'sector': 'Disney International Earnings Average', 'size': 1222971816}]
 
         // Add title
         var title = chart.titles.create();
@@ -494,103 +528,103 @@ document.addEventListener('DOMContentLoaded', function () {
 
         chart.legend = new am4charts.Legend();
         chart.legend.valign = 'top';
+        chart.legend.fontSize = 15;
+
         // Animate chart data
         var currentYear = 1995;
         var nextYear = currentYear + 5;
         function getCurrentData() {
-            label.text = 'Year ' + currentYear + ' to Year ' + nextYear;
-            var data = chartData[currentYear];
-            currentYear += 5;
-            nextYear += 5;
-            if (currentYear > 2019)
-                currentYear = 1995;
+          label.text = 'Year ' + currentYear + ' to Year ' + nextYear;
+          var data = chartData[currentYear];
+          currentYear+=5;
+          nextYear += 5;
+          if (currentYear > 2019)
+            currentYear = 1995;
             nextYear = currentYear + 5;
-            return data;
+          return data;
         }
 
         function loop() {
-            //chart.allLabels[0].text = currentYear;
-            var data = getCurrentData();
-            for (var i = 0; i < data.length; i++) {
-                chart.data[i].size = data[i].size;
-            }
-            chart.invalidateRawData();
-            chart.setTimeout(loop, 4000);
+          //chart.allLabels[0].text = currentYear;
+          var data = getCurrentData();
+          for(var i = 0; i < data.length; i++) {
+            chart.data[i].size = data[i].size;
+          }
+          chart.invalidateRawData();
+          chart.setTimeout(loop, 4000);
         }
 
         loop();
-    });
+      });
 
-    am4core.ready(function () {
+    am4core.ready(function(){
 
-        // Themes begin
-        am4core.useTheme(am4themes_animated);
-        // Themes end
+          // Themes begin
+          am4core.useTheme(am4themes_animated);
+          // Themes end
 
-        /**
-         * Define data for each year
-         */
-        var chartData = domestic_average;
+          /**
+           * Define data for each year
+           */
+          var chartData = domestic_average;
 
-        // Create chart instance
-        var chart = am4core.create("pieChartDiv2", am4charts.PieChart);
+          // Create chart instance
+          var chart = am4core.create("pieChartDiv2", am4charts.PieChart);
 
-        // Add data
-        chart.data = [{
-            'sector': 'Pixar Domestic Earnings Average',
-            'size': 191796233
-        },
-        { 'sector': 'Disney Domestic Earnings Average', 'size': 927577132 }]
+          // Add data
+          chart.data = [{'sector': 'Pixar Domestic Earnings Average',
+             'size': 191796233},
+            {'sector': 'Disney Domestic Earnings Average', 'size': 927577132}]
 
-        // Add title
-        var title = chart.titles.create();
-        title.text = 'Domestic Share between Pixar and Disney';
-        title.fontSize = 16;
-        title.fontWeight = 800;
+          // Add title
+          var title = chart.titles.create();
+          title.text = 'Domestic Share between Pixar and Disney';
+          title.fontSize = 16;
+          title.fontWeight = 800;
 
-        // Add label
-        chart.innerRadius = 80;
-        var label = chart.seriesContainer.createChild(am4core.Label);
-        label.text = "1995";
-        label.horizontalCenter = "middle";
-        label.verticalCenter = "middle";
-        label.fontSize = 15;
+          // Add label
+          chart.innerRadius = 80;
+          var label = chart.seriesContainer.createChild(am4core.Label);
+          label.text = "1995";
+          label.horizontalCenter = "middle";
+          label.verticalCenter = "middle";
+          label.fontSize = 15;
 
-        // Add and configure Series
-        var pieSeries = chart.series.push(new am4charts.PieSeries());
-        pieSeries.tooltip.showTooltipOn = 'always';
-        pieSeries.dataFields.value = "size";
-        pieSeries.dataFields.category = "sector";
-        pieSeries.colors.list = [am4core.color("#FF0000"), am4core.color("#00BFFF")];
+          // Add and configure Series
+          var pieSeries = chart.series.push(new am4charts.PieSeries());
+          pieSeries.tooltip.showTooltipOn = 'always';
+          pieSeries.dataFields.value = "size";
+          pieSeries.dataFields.category = "sector";
+          pieSeries.colors.list = [am4core.color("#FF0000"), am4core.color("#00BFFF")];
+          pieSeries.labels.template.disabled = true;
 
-        pieSeries.labels.template.disabled = true;
-
-        chart.legend = new am4charts.Legend();
-        chart.legend.valign = 'top';
-        // Animate chart data
-        var currentYear = 1995;
-        var nextYear = currentYear + 5;
-        function getCurrentData() {
+          chart.legend = new am4charts.Legend();
+          chart.legend.valign = 'top';
+          chart.legend.fontSize = 15;
+          // Animate chart data
+          var currentYear = 1995;
+          var nextYear = currentYear + 5;
+          function getCurrentData() {
             label.text = 'Year ' + currentYear + ' to Year ' + nextYear;
             var data = chartData[currentYear];
-            currentYear += 5;
+            currentYear+=5;
             nextYear += 5;
             if (currentYear > 2019)
-                currentYear = 1995;
-            nextYear = currentYear + 5;
+              currentYear = 1995;
+              nextYear = currentYear + 5;
             return data;
-        }
+          }
 
-        function loop() {
+          function loop() {
             //chart.allLabels[0].text = currentYear;
             var data = getCurrentData();
-            for (var i = 0; i < data.length; i++) {
-                chart.data[i].size = data[i].size;
+            for(var i = 0; i < data.length; i++) {
+              chart.data[i].size = data[i].size;
             }
             chart.invalidateRawData();
             chart.setTimeout(loop, 4000);
-        }
+          }
 
-        loop();
-    });
-});
+          loop();
+      });
+})
