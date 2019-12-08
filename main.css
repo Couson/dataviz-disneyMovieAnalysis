@@ -1,4 +1,4 @@
-/* body {
+body {
     background-color: grey;
     background-image: url('assets/v_01.mp4');
     background-repeat: no-repeat;
@@ -7,8 +7,7 @@
     background-size: cover;
     width: 100%;
     margin: 0;
-} */
-
+}
 
 h1 {
     color: wheat;
@@ -27,9 +26,17 @@ div{
     opacity: 1;
 }
 
+#pieChartDiv1{
+  height: 550px;
+}
+
+#pieChartDiv2{
+  height: 550px;
+}
 #wordCloudDiv1{
   height: 400px;
 }
+
 #wordCloudDiv2{
   height: 400px;
 }
