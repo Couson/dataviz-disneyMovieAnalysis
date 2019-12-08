@@ -23,7 +23,7 @@ div{
     margin-bottom: 20px;
     margin-left: 5%;
     margin-right: 5%;
-    opacity: 1;
+    opacity: 1
 }
 
 #pieChartDiv1{
@@ -61,23 +61,10 @@ div{
     height: 550px;
 }
 
-.col-lg-3 {
-  width: 50%;
-  float:left;
-  margin-bottom: 5%;
-  opacity: 1
-}
-
-.col-lg-4 {
-    width: 33.3%;
-    float: left;
-    margin-bottom: 5%;
-    opacity: 1
-}
-
 .col-lg-6 {
   width: 50%;
-  float:left;
+  height: 100%;
+  float: left;
   margin-bottom: 5%;
   opacity: 1
 }

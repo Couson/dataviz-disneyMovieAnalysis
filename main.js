@@ -131,6 +131,33 @@ function addPixar() {
     }
 }
 
+function addPixar2() {
+    var button = document.getElementById('adder2');
+    if (button.innerText == 'Add Pixar') {
+        button.innerText = 'Added';
+
+        series2 = chart3.series.push(new am4charts.LineSeries());
+        series2.name = "Pixar Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
+        series2.dataFields.dateX = "year1";
+        series2.dataFields.valueY = "rating1";
+        series2.tooltipText = "Average Worldwide Earnings: {rating1}";
+        series2.fill = am4core.color("#FF0000");
+        series2.stroke = am4core.color("#FF0000");
+        series2.strokeWidth = 2;
+
+        series2.tooltip.background.cornerRadius = 20;
+        series2.tooltip.background.strokeOpacity = 0;
+        series2.tooltip.pointerOrientation = "vertical";
+        series2.tooltip.label.minWidth = 40;
+        series2.tooltip.label.minHeight = 40;
+        series2.tooltip.label.textAlign = "middle";
+        series2.tooltip.label.textValign = "middle";
+        series2.stroke = am4core.color("#FF0000");
+        
+    } else {
+        // button.innerText = 'Focus';
+    }
+}
 function addBackground(node) {
     var body = document.getElementById('bodyBackground');
     console.log(body);
@@ -323,7 +350,7 @@ document.addEventListener('DOMContentLoaded', function () {
         // Themes end
 
         // Create chart
-        var chart3 = am4core.create("lineChartDiv3", am4charts.XYChart);
+        chart3 = am4core.create("lineChartDiv3", am4charts.XYChart);
 
         chart3.dateFormatter.inputDateFormat = "yyyy";
         chart3.numberFormatter.numberFormat = "#.0";
@@ -356,23 +383,23 @@ document.addEventListener('DOMContentLoaded', function () {
         series.tooltip.label.textValign = "middle";
         series.stroke = am4core.color("#00BFFF");
 
-        series3 = chart3.series.push(new am4charts.LineSeries());
-        series3.name = "Pixar Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
-        series3.dataFields.dateX = "year1";
-        series3.dataFields.valueY = "rating1";
-        series3.tooltipText = "Average Ratings: {rating1}";
-        series3.fill = am4core.color("#FF0000");
-        series3.stroke = am4core.color("#FF0000");
-        series3.strokeWidth = 2;
+        // series3 = chart3.series.push(new am4charts.LineSeries());
+        // series3.name = "Pixar Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
+        // series3.dataFields.dateX = "year1";
+        // series3.dataFields.valueY = "rating1";
+        // series3.tooltipText = "Average Ratings: {rating1}";
+        // series3.fill = am4core.color("#FF0000");
+        // series3.stroke = am4core.color("#FF0000");
+        // series3.strokeWidth = 2;
 
-        series3.tooltip.background.cornerRadius = 20;
-        series3.tooltip.background.strokeOpacity = 0;
-        series3.tooltip.pointerOrientation = "vertical";
-        series3.tooltip.label.minWidth = 40;
-        series3.tooltip.label.minHeight = 40;
-        series3.tooltip.label.textAlign = "middle";
-        series3.tooltip.label.textValign = "middle";
-        series3.stroke = am4core.color("#FF0000");
+        // series3.tooltip.background.cornerRadius = 20;
+        // series3.tooltip.background.strokeOpacity = 0;
+        // series3.tooltip.pointerOrientation = "vertical";
+        // series3.tooltip.label.minWidth = 40;
+        // series3.tooltip.label.minHeight = 40;
+        // series3.tooltip.label.textAlign = "middle";
+        // series3.tooltip.label.textValign = "middle";
+        // series3.stroke = am4core.color("#FF0000");
 
         chart3.cursor = new am4charts.XYCursor();
         chart3.cursor.behavior = "panXY"
