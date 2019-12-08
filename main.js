@@ -140,7 +140,7 @@ function addPixar2() {
         series2.name = "Pixar Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
         series2.dataFields.dateX = "year1";
         series2.dataFields.valueY = "rating1";
-        series2.tooltipText = "Average Worldwide Earnings: {rating1}";
+        series2.tooltipText = "Average Ratings: {rating1}";
         series2.fill = am4core.color("#FF0000");
         series2.stroke = am4core.color("#FF0000");
         series2.strokeWidth = 2;
