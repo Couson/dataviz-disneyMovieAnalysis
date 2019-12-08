@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', function () {
         valueAxis.renderer.minWidth = 60;
 
         var series = chart3.series.push(new am4charts.LineSeries());
-        series.name = "Disney Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
+        series.name = "Disney  Animation Studio"; //disney,pixar colors are inversed because of incorrect labels
         series.dataFields.dateX = "year2";
         series.dataFields.valueY = "rating2";
         series.tooltipText = "Average Ratings: {rating2}";
